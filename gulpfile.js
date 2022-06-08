@@ -6,15 +6,6 @@ let gulp = require("gulp"),
   rename = require("gulp-rename"),
   del = require("del"),
   autoprefixer = require("gulp-autoprefixer");
-const ghPages = require("gh-pages");
-const path = require("path");
-
-// --------------------------------------------------------------------- GH-Pages
-
-function deploy(cb) {
-  ghPages.publish(path.join(process.cwd(), "./build"), cb);
-}
-exports.deploy = deploy;
 
 gulp.task("clean", async function () {
   del.sync("dist");
