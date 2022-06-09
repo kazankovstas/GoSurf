@@ -33,7 +33,7 @@ $(function () {
     asNavFor: ".surf-slider",
   });
 
-  $(".holder__slider").slick({
+  $(".holder__slider, .shop-slider").slick({
     infinite: true,
     fade: true,
     prevArrow:
@@ -91,4 +91,8 @@ $(function () {
     ($(".guests").val() - 1) * $(".summ").data("guests") -
     1;
   $(".summ").html(summ);
+
+  $(".surfboard__circle").on("click", function () {
+    $(this).toggleClass("active");
+  });
 });

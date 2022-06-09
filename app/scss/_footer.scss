@@ -1,0 +1,21 @@
+.footer {
+  padding: 285px 0 34px 0;
+  text-align: center;
+  .btn {
+    span {
+      padding: 17px;
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+.footer__copy {
+  padding-top: 27px;
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 1.05px;
+  font-weight: 300;
+  opacity: 0.5;
+}
