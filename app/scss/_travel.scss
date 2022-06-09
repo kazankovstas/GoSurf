@@ -1,0 +1,80 @@
+.holder {
+  background-image: url(../img/travel-bg.png);
+  &.sleep {
+    background-image: url(../img/frangipani.png);
+  }
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  .slider-arrows {
+    top: 235px;
+    opacity: 0.5;
+  }
+}
+
+.holder-slider__head {
+  background-repeat: no-repeat;
+  background-position: top left;
+  min-height: 780px;
+}
+
+.holder-slider__descr {
+  min-height: 412px;
+  margin-top: -230px;
+  padding: 160px 0 0 132px;
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+
+.holder-slider__subtitle {
+  text-align: right;
+  padding: 132px 80px 0 0;
+}
+
+.holder-slider__btn {
+  text-align: center;
+}
+
+.holder-slider__info {
+  display: flex;
+  justify-content: space-around;
+}
+
+.holder-slider__info-item {
+  position: relative;
+  min-height: 200px;
+  margin-bottom: 70px;
+}
+
+.holder-slider__info-subtitle {
+  position: absolute;
+  top: 97px;
+  left: -97px;
+  width: 200px;
+  height: 0;
+  text-align: right;
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: 8px;
+  opacity: 0.5;
+  transform: rotate(-90deg);
+  white-space: nowrap;
+}
+
+.holder-slider__info-title {
+  position: relative;
+  max-width: 260px;
+  padding-left: 40px;
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.holder-pricing__span {
+  position: absolute;
+  bottom: -12px;
+  right: 0;
+  opacity: 0.75;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 5.25px;
+}
