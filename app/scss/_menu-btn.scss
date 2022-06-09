@@ -1,0 +1,75 @@
+.menu-btn {
+  margin: 20px 20px 0 0px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid $green;
+  background-color: rgba($color: #000000, $alpha: 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+  @media (min-width: 1041px) {
+    display: none;
+  }
+}
+
+.main-nav__toggle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: none;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.main-nav__menu {
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 5px;
+  border-radius: 20px;
+  background-color: #fff;
+  transition-duration: 0.25s;
+  transition-delay: 0.25s;
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    height: 5px;
+    width: 40px;
+    left: 0;
+    border-radius: 20px;
+    background-color: #fff;
+    transition-duration: 0.25s;
+    transition: transform 0.25s, top 0.25s 0.25s;
+  }
+  &::before {
+    top: -10px;
+  }
+  &::after {
+    top: 10px;
+  }
+}
+
+.main-nav__toggle.main-nav__toggle_active {
+  .main-nav__menu {
+    transition-duration: 0.1s;
+    transition-delay: 0.25s;
+    background: transparent;
+    &::before {
+      transition: top 0.25s, transform 0.25s 0.25s;
+      top: 0px;
+      transform: rotateZ(-45deg);
+    }
+    &::after {
+      transition: top 0.4s, transform 0.25s 0.25s;
+      top: 0px;
+      transform: rotateZ(45deg);
+    }
+  }
+}

@@ -95,4 +95,10 @@ $(function () {
   $(".surfboard__circle").on("click", function () {
     $(this).toggleClass("active");
   });
+
+  // Бургер меню
+  $(".menu-btn").on("click", function () {
+    $(".main-nav__toggle").toggleClass("main-nav__toggle_active"),
+      $(".menu").toggleClass("active");
+  });
 });
