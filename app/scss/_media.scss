@@ -39,6 +39,14 @@
   }
 }
 
+@media (max-width: 1366px) {
+  // -----------------------------------------------------------1366
+  // ----------------------------------------------------------Shop
+  .shop-slider__content {
+    padding-left: 20px;
+  }
+}
+
 @media (max-width: 1250px) {
   // -----------------------------------------------------------1250
   // Surf------------------------------------------------------Surf
@@ -109,7 +117,7 @@
 }
 
 @media (max-width: 1366px) {
-  // -----------------------------------------------------------1366
+  // --------------------------------------------------------1366
   // Header------------------------------------------------Header
   .header__aside {
     position: absolute;
@@ -197,10 +205,89 @@
   .slider-dotshead {
     right: 20px;
   }
+
+  // --------------------------------------------------------1366
+  // -------------------------------------------------------surf
+  .surf {
+    padding: 100px 0;
+  }
+
+  // --------------------------------------------------------1366
+  // ---------------------------------------------------holder-1
+  .holder {
+    padding: 100px 0;
+    background-size: 220px;
+  }
+
+  .holder.sleep {
+    background-size: 150px;
+  }
+
+  .sleep {
+    .holder-slider__descr {
+      background-size: 460px;
+    }
+  }
+
+  .holder-slider__descr {
+    padding: 160px 0 0 20px;
+    background-size: 600px;
+  }
+
+  .holder .slider-arrows {
+    right: 80px;
+  }
+
+  .holder .slider-arrows__left {
+    right: 125px;
+  }
+}
+
+@media (max-width: 1180px) {
+  // --------------------------------------------------------1180
+  // ---------------------------------------------------holder-1
+  .descr {
+    padding: 130px 0 0 0;
+  }
+
+  .holder-slider__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 720px;
+    margin: 0 auto;
+  }
+  .holder-slider__info-item {
+    min-height: 160px;
+    margin-bottom: 10px;
+  }
+
+  .holder-slider__info-title {
+    font-size: 32px;
+  }
+  .holder-slider__info-subtitle {
+    letter-spacing: 4px;
+  }
+  .holder-pricing__span {
+    right: 60px;
+    font-size: 12px;
+    letter-spacing: 3.25px;
+  }
+
+  .holder-slider__subtitle {
+    padding: 0 20px 0 0;
+  }
+  .holder .slider-arrows {
+    top: 80px;
+    right: 20px;
+  }
+
+  .holder .slider-arrows__left {
+    right: 60px;
+  }
 }
 
 @media (max-width: 1040px) {
-  // -----------------------------------------------------------1040
+  // --------------------------------------------------------1040
   // Header------------------------------------------------Header
   .header__aside {
     width: 100%;
@@ -296,6 +383,7 @@
   .surf {
     background-size: 120px;
   }
+
   .surf__subtitle {
     padding-right: 20px;
   }
@@ -388,8 +476,9 @@
   }
   // ------------------------------------------------------768
   // Surf------------------------------------------------Surf
-  .surf {
-    padding: 100px 0;
+  .surf,
+  .holder {
+    padding: 80px 0;
   }
 
   .surf-slider {
@@ -398,6 +487,108 @@
 
   .surf-slider .slider-arrows {
     top: 10px;
+  }
+
+  // ------------------------------------------------------768
+  // -------------------------------------------------Holder-1
+  .holder-slider__descr {
+    padding: 0 0 0 20px;
+    background-size: 400px;
+    min-height: 252px;
+    // margin-top: -320px;
+  }
+  .holder {
+    background-image: none;
+    span {
+      margin-bottom: 0;
+    }
+  }
+
+  .holder-slider__info {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    margin: 0 0 30px 0;
+    width: auto;
+  }
+
+  .holder-slider__info-item {
+    min-height: 60px;
+    text-align: left;
+  }
+
+  .holder-slider__info-title {
+    font-size: 26px;
+    max-width: 340px;
+    padding: 0;
+  }
+
+  .holder-slider__info-subtitle {
+    position: static;
+    width: auto;
+    height: auto;
+    text-align: left;
+    transform: rotate(0);
+  }
+
+  .holder-pricing__span {
+    right: 0;
+    left: 40px;
+    font-size: 10px;
+  }
+
+  // holder-2
+  .holder.sleep {
+    background-image: none;
+  }
+
+  .sleep .holder-slider__descr {
+    background-size: 230px;
+    background-position-y: 82px;
+  }
+
+  .descr {
+    padding: 0;
+    margin-bottom: 40px;
+  }
+
+  .descr__head {
+    font-size: 32px;
+    padding: 0;
+    & img {
+      top: -50px;
+      right: 75px;
+    }
+  }
+
+  .descr__head .descr__head-img {
+    left: -14px;
+    top: 30px;
+  }
+
+  .headline-right {
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 4px;
+    padding-right: 40px;
+    &::before {
+      width: 34px;
+    }
+  }
+
+  .quantity-button.quantity-up {
+    right: auto;
+    left: 25px;
+  }
+
+  .quantity-button.quantity-down {
+    right: auto;
+  }
+
+  .quantity input {
+    width: 15px;
+    height: 30px;
+    font-size: 26px;
   }
 }
 
@@ -482,13 +673,17 @@
 
   // 550---------------------------------------------------550
   // Surf------------------------------------------------Surf
+  .surf,
+  .holder {
+    padding: 50px 0;
+  }
+
   .surf {
-    padding: 60px 0;
     background-size: 50px;
     background-position: right 180px;
   }
   .subtitle__head {
-    font-size: 36px;
+    font-size: 32px;
     padding: 0;
   }
 
@@ -517,13 +712,17 @@
     width: 250px;
     padding: 28px 15px 0;
   }
+
+  .subtitle__head {
+    font-size: 28px;
+  }
 }
 
 @media (max-width: 380px) {
   // -----------------------------------------------------------380
   // Header------------------------------------------------Header
   .header__title {
-    width: 210px;
+    width: 150px;
     font-size: 60px;
     line-height: 45px;
   }
@@ -547,7 +746,41 @@
   // 380---------------------------------------------------380
   // Surf------------------------------------------------Surf
   .subtitle__head {
-    font-size: 26px;
+    font-size: 22px;
+  }
+
+  // 380---------------------------------------------------380
+  // ------------------------------------------------Holder1,2
+  .title span {
+    font-size: 90px;
+  }
+
+  .btn {
+    font-size: 30px;
+  }
+
+  .quantity input {
+    font-size: 22px;
+  }
+
+  .holder-slider__descr {
+    background-size: 330px;
+  }
+
+  .holder-slider__info-item {
+    min-height: 46px;
+  }
+
+  .holder-slider__info-title {
+    font-size: 22px;
+  }
+
+  .holder-slider__info-subtitle {
+    font-size: 16px;
+  }
+
+  .holder-pricing__span {
+    left: 22px;
   }
 }
 
