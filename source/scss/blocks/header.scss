@@ -133,14 +133,16 @@
   right: 125px;
 }
 
-.slider-dotshead {
-  position: absolute;
-  right: 80px;
-  bottom: 36px;
-  width: 920px;
-  .slick-current {
-    .dots-box {
-      border-top: 4px solid $green;
+.header {
+  .slider-dotshead {
+    position: absolute;
+    right: 50px;
+    bottom: 36px;
+    width: 920px;
+    .slick-current {
+      .dots-box {
+        border-top: 4px solid $green;
+      }
     }
   }
 }

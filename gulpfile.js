@@ -1,88 +1,159 @@
-let gulp = require("gulp"),
-  sass = require("gulp-sass"),
-  browserSync = require("browser-sync"),
-  uglify = require("gulp-uglify"),
-  concat = require("gulp-concat"),
-  rename = require("gulp-rename"),
-  del = require("del"),
-  autoprefixer = require("gulp-autoprefixer");
+const { src, dest, watch, parallel, series } = require("gulp");
+const plumber = require("gulp-plumber");
+const sourcemap = require("gulp-sourcemaps");
+const scss = require("gulp-sass");
+const postcss = require("gulp-postcss");
+const autoprefixer = require("autoprefixer");
+const csso = require("postcss-csso");
+const rename = require("gulp-rename");
+const htmlmin = require("gulp-htmlmin");
+const terser = require("gulp-terser");
+const imagemin = require("gulp-imagemin");
+const webp = require("gulp-webp");
+const svgstore = require("gulp-svgstore");
+const del = require("del");
+const sync = require("browser-sync").create();
+const ghPages = require("gh-pages");
+const path = require("path");
 
-gulp.task("clean", async function () {
-  del.sync("dist");
-});
+// --------------------------------------------------------------------- GH-Pages
 
-gulp.task("scss", function () {
-  return gulp
-    .src("app/scss/**/*.scss")
-    .pipe(sass({ outputStyle: "compressed" }))
+function deploy(cb) {
+  ghPages.publish(path.join(process.cwd(), "./build"), cb);
+}
+
+// ---------------------------------------------------------------- HTML, CSS, JS
+const html = () => {
+  return src("source/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(dest("build"));
+};
+
+const styles = () => {
+  return src("source/scss/style.scss")
+    .pipe(plumber())
+    .pipe(sourcemap.init())
+    .pipe(scss())
+    .pipe(postcss([autoprefixer(), csso()]))
+    .pipe(rename("style.min.css"))
+    .pipe(sourcemap.write("."))
+    .pipe(dest("build/css"))
+    .pipe(sync.stream());
+};
+
+const scripts = () => {
+  return src("source/js/*.js")
+    .pipe(terser())
+    .pipe(dest("build/js"))
+    .pipe(sync.stream());
+};
+
+// ------------------------------------------------------------------------- Images
+const optimizeImages = () => {
+  return src("source/img/**/*.{png,jpg,svg}")
     .pipe(
-      autoprefixer({
-        overrideBrowserslist: ["last 2 versions"],
+      imagemin([
+        imagemin.mozjpeg({ progressive: true }),
+        imagemin.optipng({ optimizationLevel: 3 }),
+        imagemin.svgo(),
+      ])
+    )
+    .pipe(dest("build/img"));
+};
+
+const copyImages = () => {
+  return src("source/img/**/*.{png,jpg,svg}").pipe(dest("build/img"));
+};
+
+const createWebp = () => {
+  return src("source/img/**/*.{jpg,png}")
+    .pipe(webp({ quality: 90 }))
+    .pipe(dest("build/img"));
+};
+
+const createSprite = () => {
+  return src("source/img/sprite/*.svg")
+    .pipe(
+      svgstore({
+        inlineSvg: true,
       })
     )
-    .pipe(rename({ suffix: ".min" }))
-    .pipe(gulp.dest("app/css"))
-    .pipe(browserSync.reload({ stream: true }));
-});
+    .pipe(rename("sprites.svg"))
+    .pipe(dest("build/img"));
+};
 
-gulp.task("css", function () {
-  return gulp
-    .src([
-      "node_modules/normalize.css/normalize.css",
-      "node_modules/slick-carousel/slick/slick.css",
-      "node_modules/animate.css/animate.css",
-    ])
-    .pipe(concat("_libs.scss"))
-    .pipe(gulp.dest("app/scss"))
-    .pipe(browserSync.reload({ stream: true }));
-});
+// -------------------------------------------------------------------------------------- Copy
+const copy = (done) => {
+  src(
+    [
+      "source/fonts/**/*.{woff2,woff}",
+      "source/*.ico",
+      "source/img/**/*.svg",
+      "!source/img/icons/*.svg",
+    ],
+    {
+      base: "source",
+    }
+  ).pipe(dest("build"));
+  done();
+};
 
-gulp.task("html", function () {
-  return gulp.src("app/*.html").pipe(browserSync.reload({ stream: true }));
-});
+// --------------------------------------------------------------------------------------- Clean
+const clean = () => {
+  return del("build");
+};
 
-gulp.task("script", function () {
-  return gulp.src("app/js/*.js").pipe(browserSync.reload({ stream: true }));
-});
+// --------------------------------------------------------------------------------------- Reload
+const reload = (done) => {
+  sync.reload();
+  done();
+};
 
-gulp.task("js", function () {
-  return gulp
-    .src(["node_modules/slick-carousel/slick/slick.js"])
-    .pipe(concat("libs.min.js"))
-    .pipe(uglify())
-    .pipe(gulp.dest("app/js"))
-    .pipe(browserSync.reload({ stream: true }));
-});
-
-gulp.task("browser-sync", function () {
-  browserSync.init({
+// -------------------------------------------------------------------------------------- Server
+const server = (done) => {
+  sync.init({
     server: {
-      baseDir: "app/",
+      baseDir: "build",
     },
+    cors: true,
+    notify: false,
+    ui: false,
   });
-});
+  done();
+};
 
-gulp.task("export", function () {
-  let buildHtml = gulp.src("app/**/*.html").pipe(gulp.dest("dist"));
+// --------------------------------------------------------------------------------------- Watcher
+const watcher = () => {
+  watch("source/scss/**/*.scss", series(styles));
+  watch("source/js/script.js", series(scripts));
+  watch("source/*.html", series(html, reload));
+};
 
-  let BuildCss = gulp.src("app/css/**/*.css").pipe(gulp.dest("dist/css"));
-
-  let BuildJs = gulp.src("app/js/**/*.js").pipe(gulp.dest("dist/js"));
-
-  let BuildFonts = gulp.src("app/fonts/**/*.*").pipe(gulp.dest("dist/fonts"));
-
-  let BuildImg = gulp.src("app/img/**/*.*").pipe(gulp.dest("dist/img"));
-});
-
-gulp.task("watch", function () {
-  gulp.watch("app/scss/**/*.scss", gulp.parallel("scss"));
-  gulp.watch("app/*.html", gulp.parallel("html"));
-  gulp.watch("app/js/*.js", gulp.parallel("script"));
-});
-
-gulp.task("build", gulp.series("clean", "export"));
-
-gulp.task(
-  "default",
-  gulp.parallel("css", "scss", "js", "browser-sync", "watch")
+// ----------------------------------------------------------------------------------------- Build
+const build = series(
+  clean,
+  copy,
+  optimizeImages,
+  parallel(styles, html, scripts, createSprite, createWebp)
 );
+
+// ---------------------------------------------------------------------------------------- Default
+exports.default = series(
+  clean,
+  copy,
+  copyImages,
+  parallel(styles, html, scripts, createSprite, createWebp),
+  series(server, watcher)
+);
+
+exports.deploy = deploy;
+exports.html = html;
+exports.styles = styles;
+exports.scripts = scripts;
+exports.optimizeImages = optimizeImages;
+exports.copyImages = copyImages;
+exports.createWebp = createWebp;
+exports.createSprite = createSprite;
+exports.copy = copy;
+exports.server = server;
+exports.build = build;
