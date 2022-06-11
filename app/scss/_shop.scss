@@ -17,13 +17,18 @@
 
 .shop-slider__inner {
   display: flex;
+  justify-content: space-between;
+  max-width: 1550px;
+  padding-right: 132px;
 }
 
 .shop-slider__info {
-  margin-right: 40px;
   padding-top: 150px;
-  max-width: 480px;
+  max-width: 348px;
   width: 100%;
+  .descr__head {
+    padding: 0;
+  }
 }
 
 .shop-slider__price {
@@ -48,7 +53,10 @@
 }
 
 .shop-extras {
-  padding-left: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  max-width: 348px;
 }
 
 .shop-extras-title {
@@ -95,6 +103,7 @@
 // Сёрфбоард
 .surfboard {
   position: relative;
+  max-width: 228px;
 }
 
 .surfboard__box {

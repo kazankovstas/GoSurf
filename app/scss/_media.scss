@@ -45,6 +45,15 @@
   .shop-slider__content {
     padding-left: 20px;
   }
+
+  .shop-slider {
+    padding: 0 0 0 20px;
+  }
+
+  .shop-slider__inner {
+    padding-right: 40px;
+    padding-left: 20px;
+  }
 }
 
 @media (max-width: 1250px) {
@@ -284,6 +293,12 @@
   .holder .slider-arrows__left {
     right: 60px;
   }
+
+  .shop-slider__info {
+    .descr {
+      padding: 0;
+    }
+  }
 }
 
 @media (max-width: 1040px) {
@@ -401,6 +416,58 @@
       margin-bottom: 100px;
     }
   }
+
+  // -----------------------------------------------------------1040
+  // ----------------------------------------------------------Shop
+  .shop-slider__inner {
+    display: grid;
+    grid-template-columns: 1fr 270px;
+  }
+
+  .shop-slider__info {
+    padding: 0;
+    margin-bottom: 40px;
+    .descr {
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  .shop-slider__price {
+    margin: 10px 0 20px;
+  }
+
+  .shop-extras {
+    margin-top: -300px;
+  }
+
+  .surfboard__content {
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 10px;
+    background-color: rgba($color: #000000, $alpha: 0.6);
+    box-shadow: 0px 0px 15px rgba($color: $green, $alpha: 0.6);
+    top: 26px;
+    left: -140px;
+    width: 260px;
+    font-size: 18px;
+    &::before {
+      display: none;
+    }
+  }
+
+  .surfboard__position--3 .surfboard__content {
+    padding-left: 0;
+    padding-right: 0;
+    top: -70px;
+    left: -40px;
+  }
+
+  // -----------------------------------------------------------1040
+  // ---------------------------------------------------------Footer
+  .footer {
+    padding: 120px 0 40px 0;
+  }
 }
 
 @media (max-width: 1102px) {
@@ -459,8 +526,8 @@
   }
 }
 
-@media (max-width: 768px) {
-  // ---------------------------------------------------------768
+@media (max-width: 767px) {
+  // ---------------------------------------------------------767
   // Header------------------------------------------------Header
   .header__title {
     font-size: 80px;
@@ -474,7 +541,7 @@
       height: 160px;
     }
   }
-  // ------------------------------------------------------768
+  // ------------------------------------------------------767
   // Surf------------------------------------------------Surf
   .surf,
   .holder {
@@ -489,7 +556,7 @@
     top: 10px;
   }
 
-  // ------------------------------------------------------768
+  // ------------------------------------------------------767
   // -------------------------------------------------Holder-1
   .holder-slider__descr {
     padding: 0 0 0 20px;
@@ -590,11 +657,41 @@
     height: 30px;
     font-size: 26px;
   }
+
+  // ---------------------------------------------------------767
+  // -------------------------------------------------------Shop
+  .shop-slider__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .surfboard {
+    justify-self: center;
+  }
+
+  .shop-extras {
+    margin-top: 40px;
+    justify-self: center;
+  }
+
+  .surfboard__content {
+    left: -220px;
+    width: 295px;
+    font-size: 13px;
+  }
+
+  .surfboard__position--2 .surfboard__content {
+    left: -39px;
+  }
+
+  .surfboard__position--3 .surfboard__content {
+    top: -43px;
+    left: -87px;
+  }
 }
 
-// ---------------------------------------------------------550
-// Header------------------------------------------------Header
 @media (max-width: 550px) {
+  // ---------------------------------------------------------550
+  // Header------------------------------------------------Header
   .header__aside {
     display: block;
     text-align: center;
@@ -715,6 +812,42 @@
 
   .subtitle__head {
     font-size: 28px;
+  }
+
+  // -----------------------------------------------------------425
+  // ---------------------------------------------------------shop
+  .shop-slider {
+    padding: 0;
+  }
+
+  .shop-slider__inner {
+    padding: 0 0 0 20px;
+  }
+
+  .shop {
+    .descr__head {
+      font-size: 26px;
+    }
+    .slider-arrows {
+      top: 80px;
+    }
+  }
+
+  .shop-extras-title,
+  .shop-extras__img {
+    margin: 0 0 16px 0;
+  }
+
+  .shop-extras__name {
+    margin: 10px 0 0 0;
+  }
+
+  .shop-extras__box:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  .footer {
+    padding: 80px 0 40px 0;
   }
 }
 
