@@ -32,6 +32,80 @@
   .header__arrows {
     left: 130px;
   }
+  // -----------------------------------------------------------1440
+  // Surf------------------------------------------------------Surf
+  .surf-box__inner {
+    min-height: 650px;
+  }
+}
+
+@media (max-width: 1250px) {
+  // -----------------------------------------------------------1250
+  // Surf------------------------------------------------------Surf
+  .slider-map {
+    max-width: 1000px;
+    min-height: 515px;
+  }
+
+  .slider-map .slick-list {
+    min-height: 515px;
+  }
+
+  .slider-dots__circle {
+    width: 16px;
+    height: 16px;
+    box-shadow: 0px 0px 35px rgba($green, 0.837777);
+  }
+
+  .slider-dots__content::before {
+    bottom: -29px;
+    left: 49.4%;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+  }
+
+  .slider-dots--1 {
+    top: 270px;
+    left: 33px;
+    .slider-dots__content::before {
+      left: -2px;
+    }
+  }
+
+  .slider-dots--2 {
+    top: 240px;
+  }
+
+  .slider-dots--3 {
+    top: 258px;
+  }
+
+  .slider-dots--4 {
+    top: 410px;
+    left: -32px;
+  }
+
+  .slider-dots--5 {
+    top: 174px;
+    left: -53px;
+  }
+
+  .slider-dots--6 {
+    top: 456px;
+    left: -92px;
+  }
+
+  .slider-dots--7 {
+    top: 317px;
+    left: -81px;
+  }
+
+  .slider-dots--8 {
+    top: 400px;
+    .slider-dots__content::before {
+      left: 59.4%;
+    }
+  }
 }
 
 @media (max-width: 1366px) {
@@ -125,9 +199,9 @@
   }
 }
 
-// -----------------------------------------------------------1040
-// Header------------------------------------------------Header
 @media (max-width: 1040px) {
+  // -----------------------------------------------------------1040
+  // Header------------------------------------------------Header
   .header__aside {
     width: 100%;
   }
@@ -217,19 +291,89 @@
       padding: 0;
     }
   }
+  // -----------------------------------------------------------1040
+  // Surf------------------------------------------------Surf
+  .surf {
+    background-size: 120px;
+  }
+  .surf__subtitle {
+    padding-right: 20px;
+  }
+  // -----------------------------------------------------------1040
+  // Заголовки---------------------------------------------Заголовки
+  .title {
+    h3 {
+      font-size: 55px;
+      &::after {
+        width: 58px;
+      }
+    }
+    span {
+      font-size: 160px;
+      margin-bottom: 100px;
+    }
+  }
 }
 
-// -----------------------------------------------------------980
-// Header------------------------------------------------Header
+@media (max-width: 1102px) {
+  // -----------------------------------------------------------1102
+  // Surf------------------------------------------------Surf
+  .slider-dots {
+    position: static;
+  }
+
+  .slider-dots__content,
+  .slider-dots--8 .slider-dots__content {
+    width: 285px;
+    padding: 28px 31px 0 32px;
+    transform: translateX(0);
+  }
+
+  .slick-current {
+    .slider-dots__content {
+      box-shadow: 0px 0px 15px rgba($green, 0.837777);
+      background-color: rgba($color: rgb(112, 112, 112), $alpha: 0.1);
+    }
+  }
+
+  .slider-map {
+    background-image: none;
+    max-width: 100%;
+    min-height: 300px;
+    .slick-list {
+      min-height: 300px;
+    }
+  }
+
+  .slider-dots__circle {
+    display: none;
+  }
+
+  .slider-dots__content {
+    display: block;
+    &::before {
+      display: none;
+    }
+  }
+
+  .surf {
+    .slick-track {
+      min-height: 300px;
+    }
+  }
+}
+
 @media (max-width: 980px) {
+  // ---------------------------------------------------------980
+  // Header------------------------------------------------Header
   .slider-dotshead {
     display: none;
   }
 }
 
-// -----------------------------------------------------------767
-// Header------------------------------------------------Header
-@media (max-width: 767px) {
+@media (max-width: 768px) {
+  // ---------------------------------------------------------768
+  // Header------------------------------------------------Header
   .header__title {
     font-size: 80px;
     line-height: 65px;
@@ -242,9 +386,22 @@
       height: 160px;
     }
   }
+  // ------------------------------------------------------768
+  // Surf------------------------------------------------Surf
+  .surf {
+    padding: 100px 0;
+  }
+
+  .surf-slider {
+    padding-top: 60px;
+  }
+
+  .surf-slider .slider-arrows {
+    top: 10px;
+  }
 }
 
-// -----------------------------------------------------------550
+// ---------------------------------------------------------550
 // Header------------------------------------------------Header
 @media (max-width: 550px) {
   .header__aside {
@@ -322,11 +479,49 @@
     z-index: 2;
     background-color: rgba($color: #000000, $alpha: 1);
   }
+
+  // 550---------------------------------------------------550
+  // Surf------------------------------------------------Surf
+  .surf {
+    padding: 60px 0;
+    background-size: 50px;
+    background-position: right 180px;
+  }
+  .subtitle__head {
+    font-size: 36px;
+    padding: 0;
+  }
+
+  // 550---------------------------------------------------------550
+  // Заголовки---------------------------------------------Заголовки
+  .title {
+    h3 {
+      right: 0;
+      font-size: 46px;
+      &::after {
+        width: 49px;
+      }
+    }
+    span {
+      font-size: 100px;
+      transform: translateX(-10%);
+    }
+  }
 }
 
-// -----------------------------------------------------------380
-// Header------------------------------------------------Header
+@media (max-width: 425px) {
+  // -----------------------------------------------------------425
+  // surf-----------------------------------------------------surf
+  .slider-map .slider-dots__content,
+  .slider-map .slick-current .slider-dots__content {
+    width: 250px;
+    padding: 28px 15px 0;
+  }
+}
+
 @media (max-width: 380px) {
+  // -----------------------------------------------------------380
+  // Header------------------------------------------------Header
   .header__title {
     width: 210px;
     font-size: 60px;
@@ -348,5 +543,20 @@
     &::before {
       width: 16px;
     }
+  }
+  // 380---------------------------------------------------380
+  // Surf------------------------------------------------Surf
+  .subtitle__head {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 375px) {
+  // -----------------------------------------------------------375
+  // surf-----------------------------------------------------surf
+  .slider-map .slider-dots__content,
+  .slider-map .slick-current .slider-dots__content {
+    width: 200px;
+    padding: 28px 10px 0;
   }
 }

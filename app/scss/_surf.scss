@@ -11,7 +11,7 @@
   margin-top: -86px;
 }
 
-.surf-box {
+.surf-box__wrapper {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -199,6 +199,7 @@
   height: 24px;
   background-color: $green;
   border-radius: 50%;
+  box-shadow: 0px 0px 35px rgba($green, 0.837777);
 }
 
 .slider-dots {
@@ -207,7 +208,7 @@
 
 .slider-dots--1 {
   top: 335px;
-  left: 0;
+  left: 22px;
   .slider-dots__content {
     transform: translateX(0);
     &::before {
