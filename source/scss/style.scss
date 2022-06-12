@@ -1,6 +1,7 @@
 // Global
 @import "global/fonts.scss";
 @import "global/vars.scss";
+@import "blocks/libs.scss";
 @import "global/global.scss";
 
 // Blocks
@@ -12,5 +13,4 @@
 @import "blocks/input-number.scss";
 @import "blocks/shop.scss";
 @import "blocks/footer.scss";
-@import "blocks/libs.scss";
 @import "blocks/media.scss";

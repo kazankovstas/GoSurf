@@ -1,10 +1,10 @@
-<a href="https://kazankovstas.github.io/HIMO-Xiaomi/">
-    <img src="source/img/himo.gif">
+<a href="https://kazankovstas.github.io/GoSurf/">
+    <img src="source/img/readme/GoSurf.png">
   </a>
 
-##### <a href="https://kazankovstas.github.io/HIMO-Xiaomi/">View Live</a>
+##### <a href="https://kazankovstas.github.io/GoSurf/">View Live</a>
 
-**Xiaomi Himo C26** - лэндинг по продаже велосипедов компании Xiaomi.
+**GoSurf** - Landing Page.
 
     - Адаптивность сетки: мобильная, планшетная и десктопная версии (responsive layout)
     - Используемая методология: БЭМ.
@@ -19,13 +19,13 @@
   </tr>
   <tr valign="top">
     <td>
-        <img src="source/img/himo-desktop.jpg">
+        <img src="source/img/readme/GoSurf-1440.jpg">
     </td>
     <td>
-        <img src="source/img/himo-tablet.jpg">
+        <img src="source/img/readme/GoSurf-768.jpg">
     </td>
     <td>
-        <img src="source/img/himo-mobile.jpg">
+        <img src="source/img/readme/GoSurf-320.jpg">
     </td>
   </tr>
 </table>
