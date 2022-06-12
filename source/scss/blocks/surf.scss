@@ -17,6 +17,26 @@
   background-size: cover;
 }
 
+.surf-box--1,
+.surf-box--5 {
+  background-image: url(../img/slide-1.webp);
+}
+
+.surf-box--2,
+.surf-box--6 {
+  background-image: url(../img/slide-2.webp);
+}
+
+.surf-box--3,
+.surf-box--7 {
+  background-image: url(../img/slide-3.webp);
+}
+
+.surf-box--4,
+.surf-box--8 {
+  background-image: url(../img/slide-4.webp);
+}
+
 .surf-box__inner {
   position: relative;
   min-height: 750px;
