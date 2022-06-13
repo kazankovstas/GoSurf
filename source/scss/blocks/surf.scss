@@ -118,7 +118,7 @@
   margin: 0 auto;
   max-width: 1200px;
   min-height: 635px;
-  background-image: url(../img/world-map-dots.png);
+  background-image: url(../img/world-map-dots.webp);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -245,7 +245,7 @@
     &::before {
       content: "";
       position: absolute;
-      background-image: url(../img/mini-marker.png);
+      background-image: url(../img/mini-marker.webp);
       width: 14px;
       height: 17px;
       background-size: cover;
