@@ -169,6 +169,14 @@ li {
   font-weight: 800;
   font-size: 40px;
   line-height: 36px;
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0px 0px 35px rgba($green, 0.837777);
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: $green;
+    padding-left: 17px;
+  }
   span {
     position: relative;
     display: inline-block;

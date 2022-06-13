@@ -25,6 +25,17 @@
   background-color: transparent;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
+  &:focus-visible {
+    outline: none;
+    .main-nav__menu {
+      background-color: $green;
+      transition-delay: 0s;
+      &::before,
+      &::after {
+        background-color: $green;
+      }
+    }
+  }
 }
 
 .main-nav__menu {
