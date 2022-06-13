@@ -4,6 +4,9 @@ body {
   color: $white;
   background-color: $black;
   text-transform: uppercase;
+  min-width: 320px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 img {
@@ -92,13 +95,16 @@ li {
 }
 
 .title {
-  span {
+  div {
     position: relative;
     display: inline-block;
     font-weight: 800;
     font-size: 200px;
     color: rgba($color: #ffffff, $alpha: 0.02);
     transform: translateX(-50px);
+  }
+  span {
+    display: inline-block;
   }
   h3 {
     position: absolute;

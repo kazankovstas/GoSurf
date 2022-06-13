@@ -20,7 +20,8 @@
     "postcss": "8.2.10",
     "postcss-csso": "5.0.1",
     "stylelint": "^13.12.0",
-    "stylelint-config-htmlacademy": "0.1.4"
+    "stylelint-config-htmlacademy": "0.1.4",
+    "wow.js": "^1.2.2"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",

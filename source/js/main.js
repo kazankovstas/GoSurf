@@ -158,4 +158,6 @@ $(function () {
     $(".main-nav__toggle").toggleClass("main-nav__toggle_active"),
       $(".menu").toggleClass("active");
   });
+
+  new WOW().init();
 });

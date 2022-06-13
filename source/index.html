@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>GoSurf</title>
     <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;300;400;500;800&display=swap"
       rel="stylesheet"
@@ -95,7 +96,7 @@
         <nav class="menu">
           <ul class="menu__list">
             <li class="menu__item">
-              <a class="menu__link" href="#">
+              <a class="menu__link" href="#surf">
                 <img
                   src="img/nav-ico-1.svg"
                   width="61"
@@ -106,7 +107,7 @@
               </a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#">
+              <a class="menu__link" href="#travel">
                 <img
                   src="img/nav-ico-2.svg"
                   width="52"
@@ -117,13 +118,13 @@
               </a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#">
+              <a class="menu__link" href="#sleep">
                 <img src="img/nav-ico-3.svg" width="47" height="48" alt="Сон" />
                 <span>sleep</span>
               </a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#">
+              <a class="menu__link" href="#shop">
                 <img
                   src="img/nav-ico-4.svg"
                   width="25"
@@ -150,9 +151,17 @@
         <div class="header__slider-item slider-item">
           <div class="slider-item__info">
             <h3 class="slider-item__info-suptitle headline-left">Serf</h3>
-            <h2 class="slider-item__info-title">North Shore</h2>
+            <h2
+              class="slider-item__info-title animate__animated animate__fadeInLeft animate__delay-1s"
+            >
+              North Shore
+            </h2>
             <p class="slider-item__info-suptext headline-left">Condition</p>
-            <p class="slider-item__info-text">Radical</p>
+            <p
+              class="slider-item__info-text animate__animated animate__fadeInRight animate__delay-1s"
+            >
+              Radical
+            </p>
             <a class="slider-item__info-link" href="#">
               <img
                 src="img/arrows-right.svg"
@@ -212,7 +221,9 @@
           </div>
         </div>
       </div>
-      <div class="slider-dotshead">
+      <div
+        class="slider-dotshead animate__animated animate__fadeInUp animate__delay-2s"
+      >
         <div class="slider-dots__item">
           <div class="dots-box">
             <p class="dots-box__number">01</p>
@@ -251,23 +262,37 @@
       </a>
     </header>
     <div class="container">
-      <section class="surf">
-        <h2 class="title">
-          <span
-            >Surf
+      <section class="surf" id="surf">
+        <div class="title">
+          <div>
+            <span
+              class="wow animate__animated animate__fadeInLeft"
+              data-wow-offset="200"
+              >Surf</span
+            >
             <h3>Surf</h3>
-          </span>
-        </h2>
-        <div class="surf__subtitle">
+          </div>
+        </div>
+        <div
+          class="surf__subtitle wow animate__animated animate__fadeInRight"
+          data-wow-offset="200"
+        >
           <div class="subtitle">
             <p class="headline-left">Current location</p>
             <p class="subtitle__head">California <span>|</span> USA</p>
           </div>
         </div>
-        <div class="slider-map">
+        <div
+          class="slider-map wow animate__animated animate__zoomInDown"
+          data-wow-offset="300"
+          data-wow-duration="2s"
+        >
           <div class="slider-dots slider-dots--1">
             <div class="slider-dots__circle"></div>
-            <div class="slider-dots__content">
+            <div
+              class="slider-dots__content wow animate__animated animate__fadeIn"
+              data-wow-delay="2.5s"
+            >
               <div class="slider-dots__content-row">
                 <div class="slider-dots__content-head">
                   <p class="slider-dots__content-title">Airlie Beach</p>
@@ -302,7 +327,10 @@
             </div>
           </div>
           <div class="slider-dots slider-dots--2">
-            <div class="slider-dots__circle"></div>
+            <div
+              class="slider-dots__circle wow animate__animated animate__fadeInUp"
+              data-wow-delay="1.8s"
+            ></div>
             <div class="slider-dots__content">
               <div class="slider-dots__content-row">
                 <div class="slider-dots__content-head">
@@ -338,7 +366,10 @@
             </div>
           </div>
           <div class="slider-dots slider-dots--3">
-            <div class="slider-dots__circle"></div>
+            <div
+              class="slider-dots__circle wow animate__animated animate__fadeInUp"
+              data-wow-delay="2s"
+            ></div>
             <div class="slider-dots__content">
               <div class="slider-dots__content-row">
                 <div class="slider-dots__content-head">
@@ -374,7 +405,10 @@
             </div>
           </div>
           <div class="slider-dots slider-dots--4">
-            <div class="slider-dots__circle"></div>
+            <div
+              class="slider-dots__circle wow animate__animated animate__fadeInUp"
+              data-wow-delay="2.2s"
+            ></div>
             <div class="slider-dots__content">
               <div class="slider-dots__content-row">
                 <div class="slider-dots__content-head">
@@ -410,7 +444,10 @@
             </div>
           </div>
           <div class="slider-dots slider-dots--5">
-            <div class="slider-dots__circle"></div>
+            <div
+              class="slider-dots__circle wow animate__animated animate__fadeInUp"
+              data-wow-delay="2.4s"
+            ></div>
             <div class="slider-dots__content">
               <div class="slider-dots__content-row">
                 <div class="slider-dots__content-head">
@@ -446,7 +483,10 @@
             </div>
           </div>
           <div class="slider-dots slider-dots--6">
-            <div class="slider-dots__circle"></div>
+            <div
+              class="slider-dots__circle wow animate__animated animate__fadeInUp"
+              data-wow-delay="2.6s"
+            ></div>
             <div class="slider-dots__content">
               <div class="slider-dots__content-row">
                 <div class="slider-dots__content-head">
@@ -482,7 +522,10 @@
             </div>
           </div>
           <div class="slider-dots slider-dots--7">
-            <div class="slider-dots__circle"></div>
+            <div
+              class="slider-dots__circle wow animate__animated animate__fadeInUp"
+              data-wow-delay="2.8s"
+            ></div>
             <div class="slider-dots__content">
               <div class="slider-dots__content-row">
                 <div class="slider-dots__content-head">
@@ -518,7 +561,10 @@
             </div>
           </div>
           <div class="slider-dots slider-dots--8">
-            <div class="slider-dots__circle"></div>
+            <div
+              class="slider-dots__circle wow animate__animated animate__fadeInUp"
+              data-wow-delay="3s"
+            ></div>
             <div class="slider-dots__content">
               <div class="slider-dots__content-row">
                 <div class="slider-dots__content-head">
@@ -556,7 +602,11 @@
         </div>
         <div class="surf-slider">
           <div class="surf-box">
-            <div class="surf-box__wrapper surf-box--1">
+            <div
+              class="surf-box__wrapper surf-box--1 wow animate__animated animate__fadeInLeft"
+              data-wow-offset="250"
+              data-wow-delay=".2s"
+            >
               <div class="surf-box__inner">
                 <div class="serf-box__inner-title">Malibu Beach</div>
                 <div class="serf-box__inner-location">
@@ -569,7 +619,11 @@
             </div>
           </div>
           <div class="surf-box">
-            <div class="surf-box__wrapper surf-box--2">
+            <div
+              class="surf-box__wrapper surf-box--2 wow animate__animated animate__fadeInUp"
+              data-wow-offset="250"
+              data-wow-delay=".4s"
+            >
               <div class="surf-box__inner">
                 <div class="serf-box__inner-title">Airlie Beach</div>
                 <div class="serf-box__inner-location">
@@ -582,7 +636,11 @@
             </div>
           </div>
           <div class="surf-box">
-            <div class="surf-box__wrapper surf-box--3">
+            <div
+              class="surf-box__wrapper surf-box--3 wow animate__animated animate__fadeInUp"
+              data-wow-offset="250"
+              data-wow-delay=".6s"
+            >
               <div class="surf-box__inner">
                 <div class="serf-box__inner-title">Cloud Nine</div>
                 <div class="serf-box__inner-location">
@@ -595,7 +653,11 @@
             </div>
           </div>
           <div class="surf-box">
-            <div class="surf-box__wrapper surf-box--4">
+            <div
+              class="surf-box__wrapper surf-box--4 wow animate__animated animate__fadeInRight"
+              data-wow-offset="250"
+              data-wow-delay=".8s"
+            >
               <div class="surf-box__inner">
                 <div class="serf-box__inner-title">Vieux Boucau</div>
                 <div class="serf-box__inner-location">
@@ -661,13 +723,17 @@
           </div>
         </div>
       </section>
-      <section class="holder">
+      <section class="holder" id="travel">
         <div class="container">
           <div class="title">
-            <span
-              >Travel
+            <div>
+              <span
+                class="wow animate__animated animate__fadeInLeft"
+                data-wow-offset="200"
+                >Travel</span
+              >
               <h3>Travel</h3>
-            </span>
+            </div>
           </div>
           <div class="holder__slider">
             <div class="holder__slider-item holder-slider">
@@ -675,7 +741,10 @@
                 class="holder-slider__head"
                 style="background-image: url(img/travel-slider-bg.png)"
               >
-                <div class="holder-slider__subtitle">
+                <div
+                  class="holder-slider__subtitle wow animate__animated animate__fadeInRight"
+                  data-wow-offset="200"
+                >
                   <div class="subtitle">
                     <p class="headline-left">Shore</p>
                     <p class="subtitle__head">
@@ -697,21 +766,37 @@
                 </div>
               </div>
               <div class="holder-slider__info">
-                <div class="holder-slider__info-item">
+                <div
+                  class="holder-slider__info-item wow animate__animated animate__fadeInUp"
+                  data-wow-offset="300"
+                  data-wow-delay=".1s"
+                >
                   <p class="holder-slider__info-subtitle">Destination</p>
                   <p class="holder-slider__info-title">Queensland Australia</p>
                 </div>
-                <div class="holder-slider__info-item">
+                <div
+                  class="holder-slider__info-item wow animate__animated animate__fadeInUp"
+                  data-wow-offset="300"
+                  data-wow-delay=".4s"
+                >
                   <p class="holder-slider__info-subtitle">Distance</p>
                   <p class="holder-slider__info-title">7,065 Miles</p>
                 </div>
-                <div class="holder-slider__info-item">
+                <div
+                  class="holder-slider__info-item wow animate__animated animate__fadeInUp"
+                  data-wow-offset="300"
+                  data-wow-delay=".7s"
+                >
                   <p class="holder-slider__info-subtitle">holder Time</p>
                   <p class="holder-slider__info-title">
                     23 Hours 5&nbsp;Minutes
                   </p>
                 </div>
-                <div class="holder-slider__info-item">
+                <div
+                  class="holder-slider__info-item wow animate__animated animate__fadeInUp"
+                  data-wow-offset="300"
+                  data-wow-delay="1s"
+                >
                   <p class="holder-slider__info-subtitle">Pricing</p>
                   <p class="holder-slider__info-title">
                     $1,976 USD
@@ -720,219 +805,13 @@
                 </div>
               </div>
               <div class="holder-slider__btn">
-                <a class="btn" href="#"> Book <span>Flight</span> </a>
-              </div>
-            </div>
-            <div class="holder__slider-item holder-slider">
-              <div
-                class="holder-slider__head"
-                style="background-image: url(img/travel-slider-bg.png)"
-              >
-                <div class="holder-slider__subtitle">
-                  <div class="subtitle">
-                    <p class="headline-left">Shore</p>
-                    <p class="subtitle__head">
-                      Airlie Beach <span>|</span> Australia
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="holder-slider__descr"
-                style="background-image: url(img/virgin.png)"
-              >
-                <div class="descr">
-                  <p class="headline-right">Airline</p>
-                  <p class="descr__head">
-                    Virgin Australia
-                    <img src="img/avia-logo.svg" alt="Логотип авиакомпании" />
-                  </p>
-                </div>
-              </div>
-              <div class="holder-slider__info">
-                <div class="holder-slider__info-item">
-                  <p class="holder-slider__info-subtitle">Destination</p>
-                  <p class="holder-slider__info-title">Queensland Australia</p>
-                </div>
-                <div class="holder-slider__info-item">
-                  <p class="holder-slider__info-subtitle">Distance</p>
-                  <p class="holder-slider__info-title">7,065 Miles</p>
-                </div>
-                <div class="holder-slider__info-item">
-                  <p class="holder-slider__info-subtitle">Travel Time</p>
-                  <p class="holder-slider__info-title">
-                    23 Hours 5&nbsp;Minutes
-                  </p>
-                </div>
-                <div class="holder-slider__info-item">
-                  <p class="holder-slider__info-subtitle">Pricing</p>
-                  <p class="holder-slider__info-title">
-                    $1,976 USD
-                    <span class="holder-pricing__span">Round Trip</span>
-                  </p>
-                </div>
-              </div>
-              <div class="holder-slider__btn">
-                <a class="btn" href="#"> Book <span>Flight</span> </a>
-              </div>
-            </div>
-            <div class="holder__slider-item holder-slider">
-              <div
-                class="holder-slider__head"
-                style="background-image: url(img/travel-slider-bg.png)"
-              >
-                <div class="holder-slider__subtitle">
-                  <div class="subtitle">
-                    <p class="headline-left">Shore</p>
-                    <p class="subtitle__head">
-                      Airlie Beach <span>|</span> Australia
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="holder-slider__descr"
-                style="background-image: url(img/virgin.png)"
-              >
-                <div class="descr">
-                  <p class="headline-right">Airline</p>
-                  <p class="descr__head">
-                    Virgin Australia
-                    <img src="img/avia-logo.svg" alt="Логотип авиакомпании" />
-                  </p>
-                </div>
-              </div>
-              <div class="holder-slider__info">
-                <div class="holder-slider__info-item">
-                  <p class="holder-slider__info-subtitle">Destination</p>
-                  <p class="holder-slider__info-title">Queensland Australia</p>
-                </div>
-                <div class="holder-slider__info-item">
-                  <p class="holder-slider__info-subtitle">Distance</p>
-                  <p class="holder-slider__info-title">7,065 Miles</p>
-                </div>
-                <div class="holder-slider__info-item">
-                  <p class="holder-slider__info-subtitle">Travel Time</p>
-                  <p class="holder-slider__info-title">
-                    23 Hours 5&nbsp;Minutes
-                  </p>
-                </div>
-                <div class="holder-slider__info-item">
-                  <p class="holder-slider__info-subtitle">Pricing</p>
-                  <p class="holder-slider__info-title">
-                    $1,976 USD
-                    <span class="holder-pricing__span">Round Trip</span>
-                  </p>
-                </div>
-              </div>
-              <div class="holder-slider__btn">
-                <a class="btn" href="#"> Book <span>Flight</span> </a>
-              </div>
-            </div>
-            <div class="holder__slider-item holder-slider">
-              <div
-                class="holder-slider__head"
-                style="background-image: url(img/travel-slider-bg.png)"
-              >
-                <div class="holder-slider__subtitle">
-                  <div class="subtitle">
-                    <p class="headline-left">Shore</p>
-                    <p class="subtitle__head">
-                      Airlie Beach <span>|</span> Australia
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="holder-slider__descr"
-                style="background-image: url(img/virgin.png)"
-              >
-                <div class="descr">
-                  <p class="headline-right">Airline</p>
-                  <p class="descr__head">
-                    Virgin Australia
-                    <img src="img/avia-logo.svg" alt="Логотип авиакомпании" />
-                  </p>
-                </div>
-              </div>
-              <div class="holder-slider__info">
-                <div class="holder-slider__info-item">
-                  <p class="holder-slider__info-subtitle">Destination</p>
-                  <p class="holder-slider__info-title">Queensland Australia</p>
-                </div>
-                <div class="holder-slider__info-item">
-                  <p class="holder-slider__info-subtitle">Distance</p>
-                  <p class="holder-slider__info-title">7,065 Miles</p>
-                </div>
-                <div class="holder-slider__info-item">
-                  <p class="holder-slider__info-subtitle">Travel Time</p>
-                  <p class="holder-slider__info-title">
-                    23 Hours 5&nbsp;Minutes
-                  </p>
-                </div>
-                <div class="holder-slider__info-item">
-                  <p class="holder-slider__info-subtitle">Pricing</p>
-                  <p class="holder-slider__info-title">
-                    $1,976 USD
-                    <span class="holder-pricing__span">Round Trip</span>
-                  </p>
-                </div>
-              </div>
-              <div class="holder-slider__btn">
-                <a class="btn" href="#"> Book <span>Flight</span> </a>
-              </div>
-            </div>
-            <div class="holder__slider-item holder-slider">
-              <div
-                class="holder-slider__head"
-                style="background-image: url(img/travel-slider-bg.png)"
-              >
-                <div class="holder-slider__subtitle">
-                  <div class="subtitle">
-                    <p class="headline-left">Shore</p>
-                    <p class="subtitle__head">
-                      Airlie Beach <span>|</span> Australia
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="holder-slider__descr"
-                style="background-image: url(img/virgin.png)"
-              >
-                <div class="descr">
-                  <p class="headline-right">Airline</p>
-                  <p class="descr__head">
-                    Virgin Australia
-                    <img src="img/avia-logo.svg" alt="Логотип авиакомпании" />
-                  </p>
-                </div>
-              </div>
-              <div class="holder-slider__info">
-                <div class="holder-slider__info-item">
-                  <p class="holder-slider__info-subtitle">Destination</p>
-                  <p class="holder-slider__info-title">Queensland Australia</p>
-                </div>
-                <div class="holder-slider__info-item">
-                  <p class="holder-slider__info-subtitle">Distance</p>
-                  <p class="holder-slider__info-title">7,065 Miles</p>
-                </div>
-                <div class="holder-slider__info-item">
-                  <p class="holder-slider__info-subtitle">Travel Time</p>
-                  <p class="holder-slider__info-title">
-                    23 Hours 5&nbsp;Minutes
-                  </p>
-                </div>
-                <div class="holder-slider__info-item">
-                  <p class="holder-slider__info-subtitle">Pricing</p>
-                  <p class="holder-slider__info-title">
-                    $1,976 USD
-                    <span class="holder-pricing__span">Round Trip</span>
-                  </p>
-                </div>
-              </div>
-              <div class="holder-slider__btn">
-                <a class="btn" href="#"> Book <span>Flight</span> </a>
+                <a
+                  class="btn wow animate__animated animate__fadeInUp"
+                  data-wow-delay=".6s"
+                  href="#"
+                >
+                  Book <span>Flight</span>
+                </a>
               </div>
             </div>
             <div class="holder__slider-item holder-slider">
@@ -1097,13 +976,17 @@
           </div>
         </div>
       </section>
-      <section class="holder sleep">
+      <section class="holder sleep" id="sleep">
         <div class="container">
           <div class="title">
-            <span
-              >Sleep
+            <div>
+              <span
+                class="wow animate__animated animate__fadeInLeft"
+                data-wow-offset="200"
+                >Sleep</span
+              >
               <h3>Sleep</h3>
-            </span>
+            </div>
           </div>
           <div class="holder__slider">
             <div class="holder__slider-item holder-slider">
@@ -1112,7 +995,10 @@
                 style="background-image: url(img/sleep-slider-bg.png)"
               >
                 <div class="holder-slider__subtitle">
-                  <div class="subtitle">
+                  <div
+                    class="subtitle wow animate__animated animate__fadeInRight"
+                    data-wow-offset="200"
+                  >
                     <p class="headline-left">Resorts</p>
                     <p class="subtitle__head">
                       Auberge <span>|</span> Australia
@@ -1137,11 +1023,19 @@
                 </div>
               </div>
               <div class="holder-slider__info">
-                <div class="holder-slider__info-item">
+                <div
+                  class="holder-slider__info-item wow animate__animated animate__fadeInUp"
+                  data-wow-offset="300"
+                  data-wow-delay=".1s"
+                >
                   <p class="holder-slider__info-subtitle">Resort</p>
                   <p class="holder-slider__info-title">Auberge Australia</p>
                 </div>
-                <div class="holder-slider__info-item">
+                <div
+                  class="holder-slider__info-item wow animate__animated animate__fadeInUp"
+                  data-wow-offset="300"
+                  data-wow-delay=".3s"
+                >
                   <p class="holder-slider__info-subtitle"># of Nights</p>
                   <div
                     class="holder-slider__info-title"
@@ -1160,7 +1054,11 @@
                     Nights
                   </div>
                 </div>
-                <div class="holder-slider__info-item">
+                <div
+                  class="holder-slider__info-item wow animate__animated animate__fadeInUp"
+                  data-wow-offset="300"
+                  data-wow-delay=".5s"
+                >
                   <p class="holder-slider__info-subtitle"># of Guests</p>
                   <div
                     class="holder-slider__info-title"
@@ -1179,7 +1077,11 @@
                     Guests
                   </div>
                 </div>
-                <div class="holder-slider__info-item">
+                <div
+                  class="holder-slider__info-item wow animate__animated animate__fadeInUp"
+                  data-wow-offset="300"
+                  data-wow-delay=".7s"
+                >
                   <p class="holder-slider__info-subtitle">Pricing</p>
                   <p class="holder-slider__info-title">
                     $
@@ -1192,363 +1094,13 @@
                 </div>
               </div>
               <div class="holder-slider__btn">
-                <a class="btn" href="#"> Book <span>Stay</span> </a>
-              </div>
-            </div>
-            <div class="holder__slider-item holder-slider">
-              <div
-                class="holder-slider__head"
-                style="background-image: url(img/sleep-slider-bg.png)"
-              >
-                <div class="holder-slider__subtitle">
-                  <div class="subtitle">
-                    <p class="headline-left">Resorts</p>
-                    <p class="subtitle__head">
-                      Auberge <span>|</span> Australia
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="holder-slider__descr"
-                style="background-image: url(img/hammock.png)"
-              >
-                <div class="descr">
-                  <p class="headline-right">Rating</p>
-                  <p class="descr__head">
-                    Excellent
-                    <img
-                      class="descr__head-img"
-                      src="img/star.svg"
-                      alt="Рейтинг"
-                    />
-                  </p>
-                </div>
-              </div>
-              <div class="holder-slider__info">
-                <div class="holder-slider__info-item">
-                  <p class="holder-slider__info-subtitle">Resort</p>
-                  <p class="holder-slider__info-title">Auberge Australia</p>
-                </div>
-                <div class="holder-slider__info-item">
-                  <p class="holder-slider__info-subtitle"># of Nights</p>
-                  <div
-                    class="holder-slider__info-title"
-                    style="letter-spacing: 6px"
-                  >
-                    <div class="quantity">
-                      <input
-                        class="nights"
-                        type="number"
-                        min="1"
-                        max="9"
-                        step="1"
-                        value="5"
-                      />
-                    </div>
-                    Nights
-                  </div>
-                </div>
-                <div class="holder-slider__info-item">
-                  <p class="holder-slider__info-subtitle"># of Guests</p>
-                  <div
-                    class="holder-slider__info-title"
-                    style="letter-spacing: 6px"
-                  >
-                    <div class="quantity">
-                      <input
-                        class="guests"
-                        type="number"
-                        min="1"
-                        max="4"
-                        step="1"
-                        value="4"
-                      />
-                    </div>
-                    Guests
-                  </div>
-                </div>
-                <div class="holder-slider__info-item">
-                  <p class="holder-slider__info-subtitle">Pricing</p>
-                  <p class="holder-slider__info-title">
-                    $
-                    <span class="summ" data-nights="55" data-guests="25"
-                      >349</span
-                    >
-                    USD
-                    <span class="holder-pricing__span">Per Night</span>
-                  </p>
-                </div>
-              </div>
-              <div class="holder-slider__btn">
-                <a class="btn" href="#"> Book <span>Stay</span> </a>
-              </div>
-            </div>
-            <div class="holder__slider-item holder-slider">
-              <div
-                class="holder-slider__head"
-                style="background-image: url(img/sleep-slider-bg.png)"
-              >
-                <div class="holder-slider__subtitle">
-                  <div class="subtitle">
-                    <p class="headline-left">Resorts</p>
-                    <p class="subtitle__head">
-                      Auberge <span>|</span> Australia
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="holder-slider__descr"
-                style="background-image: url(img/hammock.png)"
-              >
-                <div class="descr">
-                  <p class="headline-right">Rating</p>
-                  <p class="descr__head">
-                    Excellent
-                    <img
-                      class="descr__head-img"
-                      src="img/star.svg"
-                      alt="Рейтинг"
-                    />
-                  </p>
-                </div>
-              </div>
-              <div class="holder-slider__info">
-                <div class="holder-slider__info-item">
-                  <p class="holder-slider__info-subtitle">Resort</p>
-                  <p class="holder-slider__info-title">Auberge Australia</p>
-                </div>
-                <div class="holder-slider__info-item">
-                  <p class="holder-slider__info-subtitle"># of Nights</p>
-                  <div
-                    class="holder-slider__info-title"
-                    style="letter-spacing: 6px"
-                  >
-                    <div class="quantity">
-                      <input
-                        class="nights"
-                        type="number"
-                        min="1"
-                        max="9"
-                        step="1"
-                        value="5"
-                      />
-                    </div>
-                    Nights
-                  </div>
-                </div>
-                <div class="holder-slider__info-item">
-                  <p class="holder-slider__info-subtitle"># of Guests</p>
-                  <div
-                    class="holder-slider__info-title"
-                    style="letter-spacing: 6px"
-                  >
-                    <div class="quantity">
-                      <input
-                        class="guests"
-                        type="number"
-                        min="1"
-                        max="4"
-                        step="1"
-                        value="4"
-                      />
-                    </div>
-                    Guests
-                  </div>
-                </div>
-                <div class="holder-slider__info-item">
-                  <p class="holder-slider__info-subtitle">Pricing</p>
-                  <p class="holder-slider__info-title">
-                    $
-                    <span class="summ" data-nights="55" data-guests="25"
-                      >349</span
-                    >
-                    USD
-                    <span class="holder-pricing__span">Per Night</span>
-                  </p>
-                </div>
-              </div>
-              <div class="holder-slider__btn">
-                <a class="btn" href="#"> Book <span>Stay</span> </a>
-              </div>
-            </div>
-            <div class="holder__slider-item holder-slider">
-              <div
-                class="holder-slider__head"
-                style="background-image: url(img/sleep-slider-bg.png)"
-              >
-                <div class="holder-slider__subtitle">
-                  <div class="subtitle">
-                    <p class="headline-left">Resorts</p>
-                    <p class="subtitle__head">
-                      Auberge <span>|</span> Australia
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="holder-slider__descr"
-                style="background-image: url(img/hammock.png)"
-              >
-                <div class="descr">
-                  <p class="headline-right">Rating</p>
-                  <p class="descr__head">
-                    Excellent
-                    <img
-                      class="descr__head-img"
-                      src="img/star.svg"
-                      alt="Рейтинг"
-                    />
-                  </p>
-                </div>
-              </div>
-              <div class="holder-slider__info">
-                <div class="holder-slider__info-item">
-                  <p class="holder-slider__info-subtitle">Resort</p>
-                  <p class="holder-slider__info-title">Auberge Australia</p>
-                </div>
-                <div class="holder-slider__info-item">
-                  <p class="holder-slider__info-subtitle"># of Nights</p>
-                  <div
-                    class="holder-slider__info-title"
-                    style="letter-spacing: 6px"
-                  >
-                    <div class="quantity">
-                      <input
-                        class="nights"
-                        type="number"
-                        min="1"
-                        max="9"
-                        step="1"
-                        value="5"
-                      />
-                    </div>
-                    Nights
-                  </div>
-                </div>
-                <div class="holder-slider__info-item">
-                  <p class="holder-slider__info-subtitle"># of Guests</p>
-                  <div
-                    class="holder-slider__info-title"
-                    style="letter-spacing: 6px"
-                  >
-                    <div class="quantity">
-                      <input
-                        class="guests"
-                        type="number"
-                        min="1"
-                        max="4"
-                        step="1"
-                        value="4"
-                      />
-                    </div>
-                    Guests
-                  </div>
-                </div>
-                <div class="holder-slider__info-item">
-                  <p class="holder-slider__info-subtitle">Pricing</p>
-                  <p class="holder-slider__info-title">
-                    $
-                    <span class="summ" data-nights="55" data-guests="25"
-                      >349</span
-                    >
-                    USD
-                    <span class="holder-pricing__span">Per Night</span>
-                  </p>
-                </div>
-              </div>
-              <div class="holder-slider__btn">
-                <a class="btn" href="#"> Book <span>Stay</span> </a>
-              </div>
-            </div>
-            <div class="holder__slider-item holder-slider">
-              <div
-                class="holder-slider__head"
-                style="background-image: url(img/sleep-slider-bg.png)"
-              >
-                <div class="holder-slider__subtitle">
-                  <div class="subtitle">
-                    <p class="headline-left">Resorts</p>
-                    <p class="subtitle__head">
-                      Auberge <span>|</span> Australia
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="holder-slider__descr"
-                style="background-image: url(img/hammock.png)"
-              >
-                <div class="descr">
-                  <p class="headline-right">Rating</p>
-                  <p class="descr__head">
-                    Excellent
-                    <img
-                      class="descr__head-img"
-                      src="img/star.svg"
-                      alt="Рейтинг"
-                    />
-                  </p>
-                </div>
-              </div>
-              <div class="holder-slider__info">
-                <div class="holder-slider__info-item">
-                  <p class="holder-slider__info-subtitle">Resort</p>
-                  <p class="holder-slider__info-title">Auberge Australia</p>
-                </div>
-                <div class="holder-slider__info-item">
-                  <p class="holder-slider__info-subtitle"># of Nights</p>
-                  <div
-                    class="holder-slider__info-title"
-                    style="letter-spacing: 6px"
-                  >
-                    <div class="quantity">
-                      <input
-                        class="nights"
-                        type="number"
-                        min="1"
-                        max="9"
-                        step="1"
-                        value="5"
-                      />
-                    </div>
-                    Nights
-                  </div>
-                </div>
-                <div class="holder-slider__info-item">
-                  <p class="holder-slider__info-subtitle"># of Guests</p>
-                  <div
-                    class="holder-slider__info-title"
-                    style="letter-spacing: 6px"
-                  >
-                    <div class="quantity">
-                      <input
-                        class="guests"
-                        type="number"
-                        min="1"
-                        max="4"
-                        step="1"
-                        value="4"
-                      />
-                    </div>
-                    Guests
-                  </div>
-                </div>
-                <div class="holder-slider__info-item">
-                  <p class="holder-slider__info-subtitle">Pricing</p>
-                  <p class="holder-slider__info-title">
-                    $
-                    <span class="summ" data-nights="55" data-guests="25"
-                      >349</span
-                    >
-                    USD
-                    <span class="holder-pricing__span">Per Night</span>
-                  </p>
-                </div>
-              </div>
-              <div class="holder-slider__btn">
-                <a class="btn" href="#"> Book <span>Stay</span> </a>
+                <a
+                  class="btn wow animate__animated animate__fadeInUp"
+                  data-wow-delay=".6s"
+                  href="#"
+                >
+                  Book <span>Stay</span>
+                </a>
               </div>
             </div>
             <div class="holder__slider-item holder-slider">
@@ -1821,12 +1373,16 @@
           </div>
         </div>
       </section>
-      <section class="shop">
+      <section class="shop" id="shop">
         <div class="title">
-          <span
-            >Shop
+          <div>
+            <span
+              class="wow animate__animated animate__fadeInLeft"
+              data-wow-offset="200"
+              >Shop</span
+            >
             <h3>Shop</h3>
-          </span>
+          </div>
         </div>
         <div class="shop-slider">
           <div class="shop-slider__item">
@@ -1847,7 +1403,11 @@
                   <a class="btn" href="#"> Drop <span>In</span> </a>
                 </div>
               </div>
-              <div class="surfboard">
+              <div
+                class="surfboard wow animate__animated animate__fadeInUp"
+                data-wow-delay="1s"
+                data-wow-duration="1s"
+              >
                 <img
                   src="img/surfboard.png"
                   width="228"
@@ -1980,12 +1540,19 @@
         </div>
       </section>
       <footer class="footer">
-        <a class="btn" href="#"> Go <span>Surf</span> </a>
+        <a
+          class="btn wow animate__animated animate__fadeInUp"
+          href="#"
+          data-wow-delay=".4s"
+        >
+          Go <span>Surf</span>
+        </a>
         <p class="footer__copy">© Go-Surf 2022. All Rights Reserved.</p>
       </footer>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/libs.min.js"></script>
+    <script src="js/wow.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
