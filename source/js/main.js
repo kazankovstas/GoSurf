@@ -101,7 +101,7 @@ $(function () {
 
   // Input-number
   $(
-    '<div class="quantity-nav"><div class="quantity-button quantity-up"><img src="img/plus.svg"/></div><div class="quantity-button quantity-down"><img src="img/minus.svg"/></div></div>'
+    '<div class="quantity-nav"><div class="quantity-button quantity-up"><img src="img/plus.svg" width="14" height="14"/></div><div class="quantity-button quantity-down"><img src="img/minus.svg" width="14" height="4"/></div></div>'
   ).insertAfter(".quantity input");
   $(".quantity").each(function () {
     var spinner = $(this),
